@@ -2,28 +2,36 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import federation from '@originjs/vite-plugin-federation';
+import {dependencies} from './package.json'
 
 export default defineConfig({
   plugins: [
     react(),
     federation({
-      name: 'remote_card1',
+      name: 'tax_program',
       filename: 'remoteEntry.js',
       exposes: {
-        './Card1': './src/Card1.tsx',
+        './TaxCard': './src/TaxCard.tsx',
+        './List': './src/List.tsx',
+        './DagView': './src/DagView.tsx',
       },
       shared: {
         react: {
-          singleton: true,
-          requiredVersion: '^18.2.0',
+          import: 'react',
+          external: true,
+          requiredVersion: dependencies['react']
         },
         'react-dom': {
-          singleton: true,
-          requiredVersion: '^18.2.0',
+          import: 'react-dom',
+          external: true,
+          requiredVersion: dependencies['react-dom']
         }
-      },
+      }
     }),
   ],
+  optimizeDeps: {
+    exclude: ['react', 'react-dom'],
+  },
   build: {
     target: 'esnext',
     minify: false,

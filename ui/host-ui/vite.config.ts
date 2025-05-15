@@ -2,6 +2,7 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import federation from '@originjs/vite-plugin-federation';
+import {dependencies} from './package.json'
 
 export default defineConfig({
   server: {
@@ -17,13 +18,17 @@ export default defineConfig({
       },
       shared: {
         react: {
-        singleton: true,
-          requiredVersion: '^18.2.0',
+          singleton: true,
+          requiredVersion: '^19.1.0',
         },
         'react-dom': {
           singleton: true,
-          requiredVersion: '^18.2.0',
-        }
+          requiredVersion: '^19.1.0',
+        },
+        'react-router-dom': {
+          singleton: true,
+          requiredVersion: '^7.6.0',
+        },
       }
     }),
   ],

@@ -11,9 +11,10 @@
     "start": "vite preview --port 3001"
   },
   "dependencies": {
+    "@shared/ui": "workspace:*",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "@shared/ui": "workspace:*"
+    "reactflow": "^11.11.4"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",

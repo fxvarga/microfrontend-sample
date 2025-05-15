@@ -1,5 +1,6 @@
 import './App.css'
-import Card1 from './Card1'
+import DagView from './DagView'
+import TaxCard from './TaxCard'
 
 function App() {
 
@@ -7,7 +8,8 @@ function App() {
 
     <div style={{ padding: '2rem' }}>
       <h1>Client Shell App Number One</h1>
-      <Card1/>
+      <TaxCard/>
+      <DagView />
     </div>
   )
 }

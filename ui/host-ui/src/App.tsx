@@ -1,21 +1,30 @@
 // src/App.tsx
 import React, { Suspense } from 'react';
 
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+
+import Home from './Home';
+import DagWithPanel from './pages/DagPanel';
+
 // Dynamically import federated components
-const RemoteCard1 = React.lazy(() => import('remote_tax/Card1'));
-const RemoteCard2 = React.lazy(() => import('remote_sales/Card2'));
+const TaxList = React.lazy(() => import('remote_tax/List'));
 
 const App = () => {
   return (
-    <div style={{ padding: '2rem' }}>
-      <h1>Host Shell App</h1>
-      <Suspense fallback={<p>Loading Card 1...</p>}>
-        <RemoteCard1 />
+    <Router>
+      <nav style={{ marginBottom: '1rem' }}>
+        <Link to="/" style={{ marginRight: '1rem' }}>🏠 Home</Link>
+        <Link to="/tax" style={{ marginRight: '1rem' }}>💼 Tax</Link>
+      </nav>
+
+      <Suspense fallback={<div>Loading remote module...</div>}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/tax" element={<TaxList />} />
+          <Route path="/dag" element={<DagWithPanel />} />
+        </Routes>
       </Suspense>
-      <Suspense fallback={<p>Loading Card 2...</p>}>
-        <RemoteCard2 />
-      </Suspense>
-    </div>
+    </Router>
   );
 };
 
