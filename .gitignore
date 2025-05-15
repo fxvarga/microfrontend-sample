@@ -40,3 +40,5 @@ Thumbs.db
 # Optional: lock files at package level (if using root-only)
 **/package-lock.json
 **/yarn.lock
+
+*storybook.log
