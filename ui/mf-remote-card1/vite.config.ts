@@ -12,7 +12,16 @@ export default defineConfig({
       exposes: {
         './Card1': './src/Card1.tsx',
       },
-      shared: ['react', 'react-dom'],
+      shared: {
+        react: {
+          singleton: true,
+          requiredVersion: '^18.2.0',
+        },
+        'react-dom': {
+          singleton: true,
+          requiredVersion: '^18.2.0',
+        }
+      },
     }),
   ],
   build: {
@@ -21,6 +30,6 @@ export default defineConfig({
     cssCodeSplit: false,
   },
   server: {
-    port: 3001,
+    port: 5001,
   },
 });

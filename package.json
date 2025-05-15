@@ -5,6 +5,8 @@
   "scripts": {
     "preview": "turbo run preview",
     "dev": "turbo run dev --filter=host-ui",
+    "dev-client-1": "turbo run dev --filter=mf-remote-card1",
+    "dev-client-2": "turbo run dev --filter=mf-remote-card2",
     "build": "turbo run build --filter=!host-ui",
     "start": "turbo run start",
     "storybook": "turbo run storybook --filter=@shared/ui"

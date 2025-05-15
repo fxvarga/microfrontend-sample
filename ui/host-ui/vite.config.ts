@@ -15,7 +15,16 @@ export default defineConfig({
         remote_tax: 'http://localhost:3001/assets/remoteEntry.js',
         remote_sales: 'http://localhost:3002/assets/remoteEntry.js',
       },
-      shared: ['react', 'react-dom'],
+      shared: {
+        react: {
+        singleton: true,
+          requiredVersion: '^18.2.0',
+        },
+        'react-dom': {
+          singleton: true,
+          requiredVersion: '^18.2.0',
+        }
+      }
     }),
   ],
   build: {
