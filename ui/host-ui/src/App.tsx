@@ -2,8 +2,8 @@
 import React, { Suspense } from 'react';
 
 // Dynamically import federated components
-const RemoteCard1 = React.lazy(() => import('remote_card1/Card1'));
-const RemoteCard2 = React.lazy(() => import('remote_card2/Card2'));
+const RemoteCard1 = React.lazy(() => import('remote_tax/Card1'));
+const RemoteCard2 = React.lazy(() => import('remote_sales/Card2'));
 
 const App = () => {
   return (

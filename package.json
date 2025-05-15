@@ -1,0 +1,15 @@
+{
+  "name": "microfrontend-root",
+  "private": true,
+  "packageManager": "pnpm@9.14.4",
+  "scripts": {
+    "preview": "turbo run preview",
+    "dev": "turbo run dev --filter=host-ui",
+    "build": "turbo run build --filter=!host-ui",
+    "start": "turbo run start"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "turbo": "^2.5.3"
+  }
+}

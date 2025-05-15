@@ -1,0 +1,42 @@
+# Node
+node_modules/
+.pnpm/
+.pnp.*
+*.log
+*.tsbuildinfo
+
+# Turbo
+turbo/
+.cache/
+
+# Output
+dist/
+build/
+coverage/
+temp/
+
+# Vite
+.vite/
+*.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.*.local
+
+# IDEs
+.idea/
+.vscode/
+*.sw?
+
+# Storybook (optional)
+.out/
+.storybook-out/
+.storybook-static/
+
+# Optional: lock files at package level (if using root-only)
+**/package-lock.json
+**/yarn.lock

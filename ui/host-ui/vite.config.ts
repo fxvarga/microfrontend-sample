@@ -12,8 +12,8 @@ export default defineConfig({
     federation({
       name: 'host-app',
       remotes: {
-        remove_tax: 'http://localhost:3001/assets/remoteEntry.js',
-        remote_card2: 'http://localhost:3002/assets/remoteEntry.js',
+        remote_tax: 'http://localhost:3001/assets/remoteEntry.js',
+        remote_sales: 'http://localhost:3002/assets/remoteEntry.js',
       },
       shared: ['react', 'react-dom'],
     }),
