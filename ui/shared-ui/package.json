@@ -4,7 +4,8 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && pnpm run postbuild",
+    "postbuild": "cpx src/*.css dist/",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
@@ -16,6 +17,9 @@
     "@storybook/react": "8.6.12",
     "@storybook/react-vite": "8.6.12",
     "@storybook/test": "8.6.12",
+    "autoprefixer": "^10.4.21",
+    "cpx": "^1.5.0",
+    "postcss": "^8.5.3",
     "storybook": "8.6.12"
   }
 }

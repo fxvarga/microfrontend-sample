@@ -17,6 +17,10 @@
       "outputs": [],
       "cache": false,
       "persistent": true
+    },
+    "storybook": {
+      "cache": false,
+      "outputs": []
     }
   }
 }

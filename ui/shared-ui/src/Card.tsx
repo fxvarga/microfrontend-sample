@@ -1,10 +1,17 @@
 import React from 'react';
+import './Card.css';
 
-export const Card = ({ title, children }: { title: string; children: React.ReactNode }) => {
+type CardProps = {
+  title?: string;
+  children: React.ReactNode;
+  className?: string;
+};
+
+export const Card: React.FC<CardProps> = ({ title, children, className = '' }) => {
   return (
-    <div style={{ border: '2px solid #555', padding: '1rem', borderRadius: '50px' }}>
-      <h3>{title}</h3>
-      <div>{children}</div>
+    <div className={`card ${className}`}>
+      {title && <h3 className="card-title">{title}</h3>}
+      <div className="card-content">{children}</div>
     </div>
   );
 };

@@ -8,6 +8,8 @@ node_modules/
 # Turbo
 turbo/
 .cache/
+.turbo/**
+.turbo/daemon
 
 # Output
 dist/

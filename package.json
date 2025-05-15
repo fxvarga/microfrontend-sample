@@ -6,7 +6,8 @@
     "preview": "turbo run preview",
     "dev": "turbo run dev --filter=host-ui",
     "build": "turbo run build --filter=!host-ui",
-    "start": "turbo run start"
+    "start": "turbo run start",
+    "storybook": "turbo run storybook --filter=@shared/ui"
   },
   "devDependencies": {
     "concurrently": "^8.2.2",
