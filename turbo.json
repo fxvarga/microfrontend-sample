@@ -4,23 +4,15 @@
       "dependsOn": ["^build"],
       "outputs": ["dist/**"]
     },
-    "preview": {
-      "dependsOn": ["build"],
-      "outputs": []
-    },
     "dev": {
+      "dependsOn": [],
       "cache": false,
       "persistent": true
     },
-    "start": {
-      "dependsOn": ["^build"],
-      "outputs": [],
+    "dev:mf_consumer": {
+      "dependsOn": ["dev:mf_provider", "dev:mf_workflow"],
       "cache": false,
       "persistent": true
-    },
-    "storybook": {
-      "cache": false,
-      "outputs": []
     }
   }
 }
