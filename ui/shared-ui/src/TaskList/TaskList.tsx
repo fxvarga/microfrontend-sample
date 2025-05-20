@@ -13,7 +13,7 @@ interface TaskListProps {
   tasks: Task[];
 }
 
-const TaskList: React.FC<TaskListProps> = ({ tasks }) => {
+export const TaskList: React.FC<TaskListProps> = ({ tasks }) => {
   const completedCount = tasks.filter(task => task.status === 'completed').length;
   const progressPercent = Math.round((completedCount / tasks.length) * 100);
 
@@ -44,5 +44,3 @@ const TaskList: React.FC<TaskListProps> = ({ tasks }) => {
     </div>
   );
 };
-
-export default TaskList;

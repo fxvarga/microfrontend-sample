@@ -1,21 +1,21 @@
 import { useCallback, useEffect, useState } from "react";
 import WorkflowContentWrapper from "../../../shared/layout/WorkflowContentWrapper"
 import React from "react";
+import Workflow from "workflow"
+import TaskList from "taskList"
 
-const Workflow = React.lazy(()=> import("workflow"));
-const TaskList = React.lazy(()=> import("taskList"));
-const WorkflowCreate = ()=>{
+const WorkflowRun = ()=>{
   const sampleTasks = [
     { id: '1', title: 'Crawl New Titles from Netflix Metadata Store', status: 'completed' },
     { id: '2', title: 'Extract Actor Lists from Title Metadata', status: 'completed' },
     { id: '3', title: 'Deduplicate Actor Entries by Name & ID', status: 'started' },
     { id: '4', title: 'Normalize Actor Name Spellings and Aliases', status: 'not_started' },
     { id: '5', title: 'Enrich Actor Profiles with IMDb and TMDb Data', status: 'not_started' },
-    // { id: '6', title: 'Link Actors to Known Genres and Title Types', status: 'not_started' },
-    // { id: '7', title: 'Generate Actor Search Tokens and Synonyms', status: 'not_started' },
-    // { id: '8', title: 'Detect Actor Role Types (Lead, Supporting, Cameo)', status: 'not_started' },
-    // { id: '9', title: 'Index Actor Data into Elasticsearch', status: 'not_started' },
-    // { id: '10', title: 'Validate Actor Search Index with Sample Queries', status: 'not_started' },
+    { id: '6', title: 'Link Actors to Known Genres and Title Types', status: 'not_started' },
+    { id: '7', title: 'Generate Actor Search Tokens and Synonyms', status: 'not_started' },
+    { id: '8', title: 'Detect Actor Role Types (Lead, Supporting, Cameo)', status: 'not_started' },
+    { id: '9', title: 'Index Actor Data into Elasticsearch', status: 'not_started' },
+    { id: '10', title: 'Validate Actor Search Index with Sample Queries', status: 'not_started' },
   ];
   const [inProgressTasks, setInProgressTasks] = useState(sampleTasks);
   const [showSteps, setShowSteps] = useState<string | null>(null);
@@ -75,4 +75,4 @@ const WorkflowCreate = ()=>{
     </div>
   </WorkflowContentWrapper>
 }
-export default WorkflowCreate;
+export default WorkflowRun;

@@ -13,6 +13,10 @@
       "dependsOn": ["dev:mf_provider", "dev:mf_workflow"],
       "cache": false,
       "persistent": true
+    },
+    "storybook": {
+      "cache": false,
+      "outputs": []
     }
   }
 }

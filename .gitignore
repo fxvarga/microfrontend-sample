@@ -37,7 +37,7 @@ Thumbs.db
 # Storybook (optional)
 .out/
 .storybook-out/
-.storybook-static/
+*storybook-static*
 
 # Optional: lock files at package level (if using root-only)
 **/package-lock.json

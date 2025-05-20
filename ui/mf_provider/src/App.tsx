@@ -3,9 +3,7 @@ import Provider from './components/ProviderComponent';
 
 const App = () => {
   return (
-    <div className="content">
-      <Provider />
-    </div>
+    <div className="content"></div>
   );
 };
 

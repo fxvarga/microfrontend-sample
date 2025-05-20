@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".", // make sure this aligns with Storybook's root
     "outDir": "dist",
     "rootDir": "src",
     "composite": true,
@@ -10,7 +11,8 @@
     "target": "ESNext",
     "moduleResolution": "node",
     "esModuleInterop": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "moduleResolution": "node"
   },
   "include": ["src"]
 }

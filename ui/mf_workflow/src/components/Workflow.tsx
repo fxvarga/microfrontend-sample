@@ -12,27 +12,21 @@ const nodeTypes = {
 interface IWorkflowProps {
   id:string;
   onDetailsClick : (id:string)=>void
-  panelOpen:boolean
+  panelOpen?:boolean
 }
 
 const Workflow = React.memo((props:IWorkflowProps)=> {
-  const {onDetailsClick, panelOpen} = props;
+  const {onDetailsClick} = props;
 
   const flowRef = useRef<ReactFlowInstance | null>(null);
 
   const onInit = useCallback((instance: ReactFlowInstance) => {
     flowRef.current = instance;
-    instance.fitView({ duration: 300, padding: 0.4 });
-  }, []);
-
-  useEffect(() => {
-    if (flowRef.current) {
-      flowRef.current.fitView({
+    flowRef.current.fitView({
         duration: 300,
-        padding: panelOpen ? 0.4 : 0.25, // less padding on wide view
-      });
-    }
-  }, [panelOpen]);
+        padding:  0.7, // less padding on wide view
+    });
+  }, []);
   const memoizedNodes = useMemo(()=> {
     return nodes.map(n => ({
     ...n,
