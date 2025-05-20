@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "lib": ["DOM", "ES2020"],
+    "rootDir": "../../",
+    "jsx": "react-jsx",
+    "target": "ES2020",
+    "noEmit": true,
+    "skipLibCheck": true,
+    "useDefineForClassFields": true,
+    // need to look into this, when using library we have this issue
+    // wonder if only locally
+    "noCheck":true,
+    /* modules */
+    "module": "ESNext",
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "Bundler",
+    "allowImportingTsExtensions": true,
+
+    /* type checking */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "paths": {
+      "*": ["./@mf-types/*"],
+      "@shared/ui": ["../shared-ui/src"]
+    }
+  },
+  "include": ["src",  "../../shared-ui/src" ]
+}

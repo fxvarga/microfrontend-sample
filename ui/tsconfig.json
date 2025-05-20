@@ -1,9 +1,6 @@
 {
   "files": [],
   "references": [
-    { "path": "./shared-ui" },
-    { "path": "./mf-remote-card1" },
-    { "path": "./mf-remote-card2" },
-    { "path": "./host-ui" }
+    { "path": "./shared-ui" }
   ]
 }

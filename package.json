@@ -4,14 +4,15 @@
   "packageManager": "pnpm@9.14.4",
   "scripts": {
     "preview": "turbo run preview",
-    "dev": "turbo run dev --filter=host-ui",
-    "dev-client-1": "turbo run dev --filter=mf-remote-card1",
-    "dev-client-2": "turbo run dev --filter=mf-remote-card2",
-    "build": "turbo run build --filter=!host-ui",
+    "dev": "turbo run",
+    "build": "turbo run build --filter=@shared/ui",
     "start": "turbo run start",
     "storybook": "turbo run storybook --filter=@shared/ui"
   },
   "devDependencies": {
+    "@module-federation/rsbuild-plugin": "^0.13.1",
+    "@rsbuild/core": "^1.3.20",
+    "@rsbuild/plugin-react": "^1.3.1",
     "concurrently": "^8.2.2",
     "turbo": "^2.5.3"
   }

@@ -3,23 +3,21 @@
   "version": "1.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "type": "module",
   "scripts": {
-    "build": "tsc && pnpm run postbuild",
+    "build": "rsbuild build",
     "postbuild": "cpx src/*.css dist/",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
   "devDependencies": {
-    "@chromatic-com/storybook": "3",
-    "@storybook/addon-essentials": "8.6.12",
-    "@storybook/addon-onboarding": "8.6.12",
-    "@storybook/blocks": "8.6.12",
-    "@storybook/react": "8.6.12",
-    "@storybook/react-vite": "8.6.12",
-    "@storybook/test": "8.6.12",
     "autoprefixer": "^10.4.21",
     "cpx": "^1.5.0",
     "postcss": "^8.5.3",
-    "storybook": "8.6.12"
+    "storybook": "8.6.14",
+    "storybook-react-rsbuild": "^1.0.1"
+  },
+  "peerDependencies": {
+    "react": "^18.3.1"
   }
 }

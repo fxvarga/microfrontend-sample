@@ -1,0 +1,75 @@
+.custom-node {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 8px 12px;
+  min-width: 220px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  font-family: 'Inter', sans-serif;
+}
+
+.node-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+/* .selected .custom-node {
+  height:200px;
+  z-index:99
+} */
+
+.selected .node-icon{
+
+  background: #6d6d6d;
+}
+.node-icon {
+  background: #f43f5e; /* hot pink */
+  color: white;
+  padding: 8px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.node-text {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+.node-title {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.node-subtitle {
+  color: #6b7280;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.node-actions {
+  display: flex;
+  gap: 8px;
+  color: #374151;
+}
+
+.node-action-icon {
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.node-action-icon:hover {
+  color: #111827;
+}
+
+.node-handle {
+  background: #d1d5db;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
