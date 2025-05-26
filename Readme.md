@@ -8,18 +8,21 @@ This project demonstrates a microfrontend architecture where independent service
 
 In this example view, we highlight how three interdependent services collaborate through microfrontend federation:
 
-1. **Consolidation Service**  
-   - Acts as the integration layer (`mf_consumer`)
+1. **Consolidation Service**
+   - Main consolidation platform located (`./ui/mf_consumer`)
+   - Acts as the integration layer
    - Provides a unified shell and shared UI components  
-   - Publishes a shared `npm` package (`shared-ui`) used by all other services
+   - Publishes a shared `npm` package (`./ui/shared-ui`) used by all other services
 
-2. **Workflow Service**  
-   - Independently deployed and versioned  
+3. **Workflow Service**
+   - Will live in another repo but in this repo for ease of example
+   - Independently deployed and versioned example located at (`./ui/mf_workflow`)
    - Responsible for workflow execution and task state management  
    - Exposes a microfrontend that renders workflow-related UI
 
-3. **Search Service**  
-   - Provides search insights, progress updates, or status tracking  
+4. **Search Service**
+   - Will live in another repo but in this repo for ease of example
+   - Provides search insights, progress updates, or status tracking example located at (`./ui/mf_provider`)
    - Hooks into the workflow view to display search-related task data  
    - Owns its own backend and UI component, and integrates into the shared view
 
