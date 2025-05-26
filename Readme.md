@@ -1,11 +1,38 @@
 # Microfrontend Federation Playground
 
-## Example Workflow View
-In this hypothetical view, we have 1) a consolidation services, 2) a workflow service deployed to its own environment and 3) a search service that would be able to provide, progress or status update on a search related task from a workflow. This is an example of how interdependent services can expose UI components connected to their corresponding backend. The services own the data/deployment/logic/UI and use shared components npm package published by consolidation service. This ensures decentralized development and deployment while providing a unification service (mf_consumer) and a unified look and feel through shared-ui components.
+## Purpose
+
+This project demonstrates a microfrontend architecture where independent services own and expose their own UI components, business logic, and deployment pipelines—while still participating in a unified user experience through a shared shell and design system.
+
+## Example: Workflow View
+
+In this example view, we highlight how three interdependent services collaborate through microfrontend federation:
+
+1. **Consolidation Service**  
+   - Acts as the integration layer (`mf_consumer`)
+   - Provides a unified shell and shared UI components  
+   - Publishes a shared `npm` package (`shared-ui`) used by all other services
+
+2. **Workflow Service**  
+   - Independently deployed and versioned  
+   - Responsible for workflow execution and task state management  
+   - Exposes a microfrontend that renders workflow-related UI
+
+3. **Search Service**  
+   - Provides search insights, progress updates, or status tracking  
+   - Hooks into the workflow view to display search-related task data  
+   - Owns its own backend and UI component, and integrates into the shared view
+
+## Benefits of This Model
+
+- **Autonomous Teams**: Each service owns its data, deployment, logic, and UI
+- **Consistent UX**: Shared components (published via the consolidation service) ensure brand and interaction consistency
+- **Composable UI**: The consumer shell dynamically loads service-owned microfrontends as needed
+- **Scalable Architecture**: Services can evolve independently, enabling faster innovation and isolated deployments
 
 ![Example of Workflow UI](./sample.png)
 
-Welcome to the **Microfrontend Federation Playground** — a modern monorepo architecture using:
+Tech Stack:
 
 - **Rsbuild** for fast, configurable builds
 - **Module Federation** for dynamic runtime composition
@@ -13,8 +40,6 @@ Welcome to the **Microfrontend Federation Playground** — a modern monorepo arc
 - **`mf_workflow`** and **`mf_provider`** remotes for isolated microfrontends
 - **`@shared/ui`** component library for reusable, styled UI components
 - **Turborepo** for task orchestration and build performance
-
-> Build scalable, composable frontends with minimal overhead and maximum modularity.
 
 ---
 
