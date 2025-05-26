@@ -4,7 +4,7 @@
 
 This project demonstrates a microfrontend architecture where independent services own and expose their own UI components, business logic, and deployment pipelines—while still participating in a unified user experience through a shared shell and design system.
 
-## Example: Workflow View
+## How it works
 
 In this example view, we highlight how three interdependent services collaborate through microfrontend federation:
 
