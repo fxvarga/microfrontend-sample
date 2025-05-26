@@ -50,7 +50,7 @@ pnpm install       # Install all dependencies from the root
 pnpm build         # Build shared-ui and both remotes (provider and workflow)
 pnpm dev           # Start dev servers in parallel
 ```
-
+navigate to [http://localhost:3000/workflows](http://localhost:3000/workflow)
 ### Local Dev Entry Points
 
 - **mf_consumer** (host shell): [http://localhost:3000](http://localhost:3000)
