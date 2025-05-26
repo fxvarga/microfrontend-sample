@@ -33,6 +33,9 @@ In this example view, we highlight how three interdependent services collaborate
 - **Composable UI**: The consumer shell dynamically loads service-owned microfrontends as needed
 - **Scalable Architecture**: Services can evolve independently, enabling faster innovation and isolated deployments
 
+
+## Example Screenshot
+
 ![Example of Workflow UI](./sample.png)
 
 Tech Stack:
