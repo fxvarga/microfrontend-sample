@@ -26,17 +26,16 @@ In this example view, we highlight how three interdependent services collaborate
    - Hooks into the workflow view to display search-related task data  
    - Owns its own backend and UI component, and integrates into the shared view
 
+## Example Screenshot
+
+![Example of Workflow UI](./sample.png)
+
 ## Benefits of This Model
 
 - **Autonomous Teams**: Each service owns its data, deployment, logic, and UI
 - **Consistent UX**: Shared components (published via the consolidation service) ensure brand and interaction consistency
 - **Composable UI**: The consumer shell dynamically loads service-owned microfrontends as needed
 - **Scalable Architecture**: Services can evolve independently, enabling faster innovation and isolated deployments
-
-
-## Example Screenshot
-
-![Example of Workflow UI](./sample.png)
 
 Tech Stack:
 
