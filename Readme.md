@@ -1,4 +1,9 @@
-# 🧩 Microfrontend Federation Playground
+# Microfrontend Federation Playground
+
+## Example Workflow View
+In this hypothetical view, we have 1) a consolidation services, 2) a workflow service deployed to its own environment and 3) a search service that would be able to provide, progress or status update on a search related task from a workflow. This is an example of how interdependent services can expose UI components connected to their corresponding backend. The services own the data/deployment/logic/UI and use shared components npm package published by consolidation service. This ensures decentralized development and deployment while providing a unification service (mf_consumer) and a unified look and feel through shared-ui components.
+
+![Example of Workflow UI](./sample.png)
 
 Welcome to the **Microfrontend Federation Playground** — a modern monorepo architecture using:
 
@@ -36,8 +41,3 @@ pnpm dev           # Start dev servers in parallel
   - Workflow component
 
 
-## Example Workflow View
-In this hypothetical view, we have a workflow service deployed to its own environment and we have a search service that would be able to provide, progress or consolidated status update on a specific task from a workflow. This allows interdependent services to expose UI components connected to their corresponding backend, these services own the data/deployment/logic and use shared components published by consolidation service. This ensures decentralized development and deployment while providing a unification service (mf_consumer) and a unified look and feel through shared-ui components.
-
-
-![Example of Workflow UI](./sample.png)
