@@ -51,6 +51,8 @@ pnpm build         # Build shared-ui and both remotes (provider and workflow)
 pnpm dev           # Start dev servers in parallel
 ```
 navigate to [http://localhost:3000/workflow](http://localhost:3000/workflow)
+ - the workflow visualization is loading from localhost:3001
+ - click on the search actors details icon and see that sidepanel loads from localhost:3002
 ### Local Dev Entry Points
 
 - **mf_consumer** (host shell): [http://localhost:3000](http://localhost:3000)
